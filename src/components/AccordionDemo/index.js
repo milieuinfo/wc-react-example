@@ -1,4 +1,7 @@
 import React, { useState, useRef } from "react";
+import "uig-webcomponents/lib/components/accordion";
+import "vl-ui-input-field/dist";
+import "vl-ui-input-field/dist/style.css";
 
 const AccordionDemo = () => {
   const accordionRef = useRef();
