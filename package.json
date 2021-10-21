@@ -11,7 +11,8 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1",
     "uig-webcomponents": "^1.1.0",
-    "webcomponenten-vl-ui-bom": "4.1.0"
+    "webcomponenten-vl-ui-bom": "4.1.0",
+    "react-router-dom": "^5.2.1"
   },
   "scripts": {
     "start": "PORT=8080 react-scripts start",
