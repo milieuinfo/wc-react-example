@@ -3,7 +3,7 @@ import Page from "../../components/Page";
 import SectionWrap from "../../components/SectionWrap";
 import "uig-webcomponents/lib/components/progress-bar";
 
-const SelectView = () => {
+const ProgressBarView = () => {
   const progressBarRef = useRef();
   const [activeStep, setActiveStep] = useState(1);
 
@@ -34,4 +34,4 @@ const SelectView = () => {
   );
 };
 
-export default SelectView;
+export default ProgressBarView;
