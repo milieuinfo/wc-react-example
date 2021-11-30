@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "../../components/Page";
 import "vl-ui-doormat";
-import "vl-ui-doormat/dist/style.css";
+// import "vl-ui-doormat/dist/style.css";
 import SectionWrap from "../../components/SectionWrap";
 import "vl-ui-cookie-consent";
 

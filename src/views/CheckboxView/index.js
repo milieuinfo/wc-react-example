@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Page from "../../components/Page";
 import SectionWrap from "../../components/SectionWrap";
 import "uig-webcomponents/lib/components/checkbox";
-import "carbon-web-components/es/components/checkbox/checkbox";
+// import "carbon-web-components/es/components/checkbox/checkbox";
 
 const CheckboxView = () => {
   const [checked, setChecked] = useState(true);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Page from "../../components/Page";
-import "vl-ui-select/dist";
-import "vl-ui-select/dist/style.css";
+import "vl-ui-select";
+// import "vl-ui-select/dist/style.css";
 import SectionWrap from "../../components/SectionWrap";
 
 const options = [

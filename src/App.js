@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./views/Landing";
 import SelectView from "./views/SelectView";
@@ -11,25 +12,25 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/accordion">
+        <Route exact path="/accordion">
           <AccordionView />
         </Route>
-        <Route path="/select">
+        <Route exact path="/select">
           <SelectView />
         </Route>
-        <Route path="/progress-bar">
+        <Route exact path="/progress-bar">
           <ProgressBarView />
         </Route>
-        <Route path="/map">
+        <Route exact path="/map">
           <MapView />
         </Route>
-        <Route path="/wizard">
+        <Route exact path="/wizard">
           <WizardView />
         </Route>
-        <Route path="/checkbox">
+        <Route exact path="/checkbox">
           <CheckboxView />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Landing />
         </Route>
       </Switch>
