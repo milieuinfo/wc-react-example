@@ -6,14 +6,17 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "carbon-components": "^10.48.0",
+    "carbon-web-components": "^1.19.0",
+    "lit-element": "^3.0.2",
+    "lit-html": "^2.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1",
-    "uig-webcomponents": "^2.0.2",
-    "webcomponenten-vl-ui-bom": "4.1.0",
     "react-router-dom": "^5.2.1",
-    "@govflanders/vl-ui-progress-bar": "^3.12.3"
+    "react-scripts": "4.0.3",
+    "uig-webcomponents": "^2.1.0",
+    "web-vitals": "^1.0.1",
+    "webcomponenten-vl-ui-bom": "4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

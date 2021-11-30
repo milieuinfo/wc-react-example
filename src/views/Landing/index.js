@@ -3,6 +3,7 @@ import Page from "../../components/Page";
 import "vl-ui-doormat";
 import "vl-ui-doormat/dist/style.css";
 import SectionWrap from "../../components/SectionWrap";
+import "vl-ui-cookie-consent";
 
 const Doormat = ({ href, title }) => (
   <div is="vl-column">
@@ -20,6 +21,8 @@ const Landing = () => {
         <Doormat href="/map" title="vl-map" />
         <Doormat href="/progress-bar" title="vl-progress-bar" />
         <Doormat href="/select" title="vl-select" />
+        <Doormat href="/wizard" title="vl-wizard" />
+        <Doormat href="/checkbox" title="vl-checkbox" />
       </SectionWrap>
     </Page>
   );
