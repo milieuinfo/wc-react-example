@@ -5,6 +5,8 @@ import ProgressBarView from "./views/ProgressBarView";
 import MapView from "./views/MapView";
 import AccordionView from "./views/AccordionView";
 import WizardView from "./views/WizardView";
+import CheckboxView from "./views/CheckboxView";
+import "uig-webcomponents/lib/components/accessibility";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
         </Route>
         <Route path="/wizard">
           <WizardView />
+        </Route>
+        <Route path="/checkbox">
+          <CheckboxView />
         </Route>
         <Route path="/">
           <Landing />
