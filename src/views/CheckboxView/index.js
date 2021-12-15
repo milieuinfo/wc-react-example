@@ -8,7 +8,6 @@ const CheckboxView = () => {
   const checkboxRef = useRef();
 
   useEffect(() => {
-    console.log("effect");
     checkboxRef.current.addEventListener("change", (event) =>
       setChecked(event.target.checked)
     );

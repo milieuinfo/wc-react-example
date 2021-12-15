@@ -22,6 +22,7 @@ const Landing = () => {
         <Doormat href="/select" title="vl-select" />
         <Doormat href="/wizard" title="vl-wizard" />
         <Doormat href="/checkbox" title="vl-checkbox" />
+        <Doormat href="/upload" title="vl-upload" />
       </SectionWrap>
     </Page>
   );

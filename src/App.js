@@ -6,7 +6,7 @@ import MapView from "./views/MapView";
 import AccordionView from "./views/AccordionView";
 import WizardView from "./views/WizardView";
 import CheckboxView from "./views/CheckboxView";
-import "uig-webcomponents/lib/components/accessibility";
+import UploadView from "./views/UploadView";
 
 function App() {
   return (
@@ -29,6 +29,9 @@ function App() {
         </Route>
         <Route path="/checkbox">
           <CheckboxView />
+        </Route>
+        <Route path="/upload">
+          <UploadView />
         </Route>
         <Route path="/">
           <Landing />
