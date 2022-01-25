@@ -1,16 +1,7 @@
 import React from "react";
 import Page from "../../components/Page";
-import "vl-ui-doormat";
-import "vl-ui-doormat/dist/style.css";
 import SectionWrap from "../../components/SectionWrap";
-
-const Doormat = ({ href, title }) => (
-  <div is="vl-column">
-    <a is="vl-doormat" href={href}>
-      <h2 is="vl-doormat-title">{title}</h2>
-    </a>
-  </div>
-);
+import Doormat from "../../components/Doormat";
 
 const Landing = () => {
   return (
@@ -23,6 +14,7 @@ const Landing = () => {
         <Doormat href="/wizard" title="vl-wizard" />
         <Doormat href="/checkbox" title="vl-checkbox" />
         <Doormat href="/upload" title="vl-upload" />
+        <Doormat href="/cookie-consent" title="vl-cookie-consent" />
       </SectionWrap>
     </Page>
   );
