@@ -7,6 +7,7 @@ import AccordionView from "./views/AccordionView";
 import WizardView from "./views/WizardView";
 import CheckboxView from "./views/CheckboxView";
 import UploadView from "./views/UploadView";
+import BreadcrumbView from "./views/BreadcrumbView";
 // import CookieConsentView from "./views/CookieConsentView";
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/upload">
           <UploadView />
+        </Route>
+        <Route path="/breadcrumb">
+          <BreadcrumbView />
         </Route>
         <Route path="/cookie-consent">{/* <CookieConsentView /> */}</Route>
         <Route path="/">

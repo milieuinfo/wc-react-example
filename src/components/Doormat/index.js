@@ -1,6 +1,6 @@
 import React from "react";
-import "vl-ui-doormat";
-import "vl-ui-doormat/dist/style.css";
+import "uig-webcomponents/lib/components/doormat";
+import "uig-webcomponents/lib/components/doormat/styles.css";
 
 const Doormat = ({ href, title }) => {
   return (

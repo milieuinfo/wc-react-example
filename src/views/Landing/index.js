@@ -15,6 +15,7 @@ const Landing = () => {
         <Doormat href="/checkbox" title="vl-checkbox" />
         <Doormat href="/upload" title="vl-upload" />
         <Doormat href="/cookie-consent" title="vl-cookie-consent" />
+        <Doormat href="/breadcrumb" title="vl-breadcrumb" />
       </SectionWrap>
     </Page>
   );
