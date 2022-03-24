@@ -8,12 +8,32 @@ import WizardView from "./views/WizardView";
 import CheckboxView from "./views/CheckboxView";
 import UploadView from "./views/UploadView";
 import BreadcrumbView from "./views/BreadcrumbView";
+import TabsView from "./views/TabsView";
+import InfoTileView from "./views/InfoTileView";
+import HttpErrorMessageView from "./views/HttpErrorMessageView";
+import RadioView from "./views/RadioView";
+import ModalView from "./views/ModalView";
 // import CookieConsentView from "./views/CookieConsentView";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/modal">
+          <ModalView />
+        </Route>
+        <Route path="/radio">
+          <RadioView />
+        </Route>
+        <Route path="/tabs">
+          <TabsView />
+        </Route>
+        <Route path="/info-tile">
+          <InfoTileView />
+        </Route>
+        <Route path="/http-error-message">
+          <HttpErrorMessageView />
+        </Route>
         <Route path="/accordion">
           <AccordionView />
         </Route>

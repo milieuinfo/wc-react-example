@@ -8,6 +8,7 @@ import "uig-webcomponents/lib/components/titles";
 import "uig-webcomponents/lib/components/titles/styles.css";
 import "uig-webcomponents/lib/components/button";
 import "uig-webcomponents/lib/components/button/styles.css";
+import "uig-webcomponents/lib/components/form-grid";
 
 ReactDOM.render(
   <React.StrictMode>
