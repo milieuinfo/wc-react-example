@@ -11,7 +11,6 @@ const UploadView = () => {
           <vl-upload
             url="http://httpbin.org/post"
             data-vl-input-name="files"
-            id="vl-upload"
           ></vl-upload>
         </div>
       </SectionWrap>

@@ -8,7 +8,7 @@ const InfoTileView = () => {
     <Page title="Info Tile">
       <SectionWrap>
         <div is="vl-column" data-vl-size="12">
-          <vl-info-tile data-vl-toggleable="true" data-vl-auto-open="true">
+          <vl-info-tile data-vl-toggleable data-vl-auto-open>
             <span slot="title">Info tile title</span>
             <span slot="subtitle">Info tile subtitle</span>
             <div slot="content">Info tile content</div>

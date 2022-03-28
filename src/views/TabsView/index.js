@@ -7,7 +7,7 @@ const TabsView = () => {
   return (
     <Page title="Tabs">
       <SectionWrap>
-        <vl-tabs id="tabs">
+        <vl-tabs>
           <vl-tabs-pane data-vl-id="trein" data-vl-title="Trein">
             Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis,
             est non commodo luctus, nisi erat porttitor ligula, eget lacinia
