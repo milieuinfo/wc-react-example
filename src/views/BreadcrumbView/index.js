@@ -15,8 +15,8 @@ const BreadcrumbView = () => {
       <SectionWrap>
         <div is="vl-column">
           <vl-breadcrumb>
-            {items.map(({ label, href }) => (
-              <vl-breadcrumb-item data-vl-href={href}>
+            {items.map(({ label, href }, index) => (
+              <vl-breadcrumb-item key={index} data-vl-href={href}>
                 {label}
               </vl-breadcrumb-item>
             ))}

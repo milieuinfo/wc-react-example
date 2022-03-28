@@ -13,6 +13,8 @@ import InfoTileView from "./views/InfoTileView";
 import HttpErrorMessageView from "./views/HttpErrorMessageView";
 import RadioView from "./views/RadioView";
 import ModalView from "./views/ModalView";
+import ButtonView from "./views/ButtonView";
+import LinkView from "./views/LinkView";
 // import CookieConsentView from "./views/CookieConsentView";
 
 function App() {
@@ -57,6 +59,12 @@ function App() {
         </Route>
         <Route path="/breadcrumb">
           <BreadcrumbView />
+        </Route>
+        <Route path="/button">
+          <ButtonView />
+        </Route>
+        <Route path="/link">
+          <LinkView />
         </Route>
         <Route path="/cookie-consent">{/* <CookieConsentView /> */}</Route>
         <Route path="/">

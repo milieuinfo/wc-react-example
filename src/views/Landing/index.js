@@ -9,14 +9,16 @@ const Landing = () => {
       <SectionWrap>
         <Doormat href="/accordion" title="vl-accordion" />
         <Doormat href="/breadcrumb" title="vl-breadcrumb" />
+        <Doormat href="/button" title="vl-button" />
         <Doormat href="/checkbox" title="vl-checkbox" />
         <Doormat href="/cookie-consent" title="vl-cookie-consent" />
         <Doormat href="/http-error-message" title="vl-http-error-message" />
         <Doormat href="/info-tile" title="vl-info-tile" />
+        <Doormat href="/link" title="vl-link" />
         <Doormat href="/map" title="vl-map" />
         <Doormat href="/modal" title="vl-modal" />
         <Doormat href="/progress-bar" title="vl-progress-bar" />
-        <Doormat href="/radio" title="vl-radio & vl-radio-group" />
+        <Doormat href="/radio" title="vl-radio" />
         <Doormat href="/select" title="vl-select" />
         <Doormat href="/tabs" title="vl-tabs" />
         <Doormat href="/upload" title="vl-upload" />
