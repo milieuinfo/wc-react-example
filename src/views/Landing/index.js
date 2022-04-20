@@ -23,6 +23,7 @@ const Landing = () => {
         <Doormat href="/tabs" title="vl-tabs" />
         <Doormat href="/upload" title="vl-upload" />
         <Doormat href="/wizard" title="vl-wizard" />
+        <Doormat href="/form" title="vl-form" />
       </SectionWrap>
     </Page>
   );

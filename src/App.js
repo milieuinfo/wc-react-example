@@ -15,7 +15,7 @@ import RadioView from "./views/RadioView";
 import ModalView from "./views/ModalView";
 import ButtonView from "./views/ButtonView";
 import LinkView from "./views/LinkView";
-// import CookieConsentView from "./views/CookieConsentView";
+import FormView from "./views/FormView";
 
 function App() {
   return (
@@ -66,7 +66,9 @@ function App() {
         <Route path="/link">
           <LinkView />
         </Route>
-        <Route path="/cookie-consent">{/* <CookieConsentView /> */}</Route>
+        <Route path="/form">
+          <FormView />
+        </Route>
         <Route path="/">
           <Landing />
         </Route>

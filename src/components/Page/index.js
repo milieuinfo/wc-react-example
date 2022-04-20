@@ -1,8 +1,5 @@
 import React from "react";
 import Header from "../Header";
-import "uig-webcomponents/lib/components/grid";
-import "uig-webcomponents/lib/components/titles";
-import "uig-webcomponents/lib/components/titles/styles.css";
 import "uig-webcomponents/lib/components/typography";
 
 const Page = ({ title, children }) => {

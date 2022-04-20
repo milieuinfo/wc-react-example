@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "uig-webcomponents/lib/components/body/styles.css";
 import "uig-webcomponents/lib/components/grid";
 import "uig-webcomponents/lib/components/titles";
 import "uig-webcomponents/lib/components/titles/styles.css";
