@@ -5,6 +5,7 @@ import "uig-webcomponents/lib/components/map";
 
 const MapView = () => {
   const featureRef = useRef();
+  const mapRef = useRef();
 
   useEffect(() => {
     featureRef.current.features = {
@@ -49,19 +50,22 @@ const MapView = () => {
   return (
     <Page title="Map">
       <SectionWrap>
-        <div is="vl-column" data-vl-size="12">
+        {/* <div is="vl-column" data-vl-size="12">
           <vl-map>
             <vl-map-overview-map />
             <vl-map-baselayer-grb-gray />
             <vl-map-baselayer-grb />
             <vl-map-baselayer-grb-ortho />
           </vl-map>
-        </div>
+        </div> */}
         <div is="vl-column" data-vl-size="12">
-          <vl-map>
+          <vl-map ref={mapRef}>
             <vl-map-baselayer-grb-gray />
             <vl-map-features-layer ref={featureRef} />
           </vl-map>
+        </div>
+        <div is="vl-column" data-vl-size="12">
+          <button is="vl-button">Add layer</button>
         </div>
       </SectionWrap>
     </Page>

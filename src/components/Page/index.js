@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../Header";
-import "uig-webcomponents/lib/components/typography";
 
 const Page = ({ title, children }) => {
   return (

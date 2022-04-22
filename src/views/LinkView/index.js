@@ -2,8 +2,6 @@
 import React from "react";
 import Page from "../../components/Page";
 import SectionWrap from "../../components/SectionWrap";
-import "uig-webcomponents/lib/components/link";
-import "uig-webcomponents/lib/components/link/styles.css";
 
 const LinkView = () => {
   return (

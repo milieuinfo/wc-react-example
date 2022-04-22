@@ -2,8 +2,6 @@
 import React from "react";
 import Page from "../../components/Page";
 import SectionWrap from "../../components/SectionWrap";
-import "uig-webcomponents/lib/components/button";
-import "uig-webcomponents/lib/components/button/styles.css";
 
 const ButtonView = () => {
   return (

@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import Page from "../../components/Page";
 import "uig-webcomponents/lib/components/accordion";
-import "vl-ui-input-field/dist";
-import "vl-ui-input-field/dist/style.css";
 import SectionWrap from "../../components/SectionWrap";
 
 const AccordionView = () => {
