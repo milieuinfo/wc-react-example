@@ -100,9 +100,9 @@ const MapView = () => {
   return (
     <Page title="Map">
       <SectionWrap>
-        <div is="vl-column" data-vl-size="12">
+        {/* <div is="vl-column" data-vl-size="12">
           <div style={{ width: "100%", height: "500px" }} ref={mapRef}></div>
-        </div>
+        </div> */}
         <div is="vl-column" data-vl-size="12">
           <HybridMap></HybridMap>
         </div>

@@ -70,12 +70,9 @@ const HybridMap = () => {
     map.addInteraction(
       new Select({ style: () => selected, condition: pointerMove })
     );
+    map.addLayer(featuresLayer);
     setMap(map);
   }, [mapRef]);
-
-  useEffect(() => {
-    map && map.addLayer(featuresLayer);
-  }, [map]);
 
   return (
     <vl-map ref={mapRef}>
