@@ -1,15 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useRef, useEffect, useState } from "react";
 import "uig-webcomponents/lib/components/map";
-import Map from "ol/Map";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
-import View from "ol/View";
-import "ol/ol.css";
-import TileLayer from "ol/layer/Tile";
 import Feature from "ol/Feature";
 import Point from "ol/geom/Point";
-import XYZ from "ol/source/XYZ";
 import { Circle, Fill, Style, Text } from "ol/style";
 import Select from "ol/interaction/Select";
 import { pointerMove } from "ol/events/condition";
