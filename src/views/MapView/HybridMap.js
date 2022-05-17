@@ -1,7 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useRef, useState } from "react";
-import Page from "../../components/Page";
-import SectionWrap from "../../components/SectionWrap";
+import React, { useRef, useEffect, useState } from "react";
 import "uig-webcomponents/lib/components/map";
 import Map from "ol/Map";
 import VectorLayer from "ol/layer/Vector";
@@ -15,9 +13,8 @@ import XYZ from "ol/source/XYZ";
 import { Circle, Fill, Style, Text } from "ol/style";
 import Select from "ol/interaction/Select";
 import { pointerMove } from "ol/events/condition";
-import HybridMap from "./HybridMap";
 
-const MapView = () => {
+const HybridMap = () => {
   const mapRef = useRef();
   const [map, setMap] = useState();
   const [features, setFeatures] = useState([
@@ -59,31 +56,6 @@ const MapView = () => {
   });
 
   useEffect(() => {
-    const map = new Map({
-      layers: [
-        new TileLayer({
-          source: new XYZ({
-            url: "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}",
-          }),
-        }),
-        featuresLayer,
-      ],
-      target: mapRef.current,
-      view: new View({
-        center: [0, 0],
-        zoom: 2,
-      }),
-    });
-
-    map.addInteraction(new Select({ style: () => selected }));
-    map.addInteraction(
-      new Select({ style: () => selected, condition: pointerMove })
-    );
-
-    setMap(map);
-  }, []);
-
-  useEffect(() => {
     if (features.length > 0 && map) {
       featuresLayer.setSource(
         new VectorSource({
@@ -91,24 +63,30 @@ const MapView = () => {
         })
       );
 
-      // map.getView().fit(featuresLayer.getSource().getExtent(), {
-      //   padding: [100, 100, 100, 100],
-      // });
+      map.getView().fit(featuresLayer.getSource().getExtent(), {
+        padding: [100, 100, 100, 100],
+      });
     }
   }, [features, map]);
 
+  useEffect(() => {
+    const map = mapRef.current.map;
+    map.addInteraction(new Select({ style: () => selected }));
+    map.addInteraction(
+      new Select({ style: () => selected, condition: pointerMove })
+    );
+    setMap(map);
+  }, [mapRef]);
+
+  useEffect(() => {
+    map && map.addLayer(featuresLayer);
+  }, [map]);
+
   return (
-    <Page title="Map">
-      <SectionWrap>
-        <div is="vl-column" data-vl-size="12">
-          <div style={{ width: "100%", height: "500px" }} ref={mapRef}></div>
-        </div>
-        <div is="vl-column" data-vl-size="12">
-          <HybridMap></HybridMap>
-        </div>
-      </SectionWrap>
-    </Page>
+    <vl-map ref={mapRef}>
+      <vl-map-baselayer-grb-gray></vl-map-baselayer-grb-gray>
+    </vl-map>
   );
 };
 
-export default MapView;
+export default HybridMap;
