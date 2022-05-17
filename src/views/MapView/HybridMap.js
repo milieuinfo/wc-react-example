@@ -46,7 +46,6 @@ const HybridMap = () => {
     text: new Text({
       font: "bold 14px Flanders Art Sans,sans-serif",
       fill: new Fill({ color: "#fff" }),
-      text: "Selected!",
     }),
   });
 
@@ -66,9 +65,22 @@ const HybridMap = () => {
 
   useEffect(() => {
     const map = mapRef.current.map;
-    map.addInteraction(new Select({ style: () => selected }));
     map.addInteraction(
-      new Select({ style: () => selected, condition: pointerMove })
+      new Select({
+        style: () => {
+          selected.getText().setText("Selected!");
+          return selected;
+        },
+      })
+    );
+    map.addInteraction(
+      new Select({
+        style: () => {
+          selected.getText().setText("Hover!");
+          return selected;
+        },
+        condition: pointerMove,
+      })
     );
     map.addLayer(featuresLayer);
     setMap(map);
