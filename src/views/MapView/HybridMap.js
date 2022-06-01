@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useRef, useEffect, useState } from "react";
 import "uig-webcomponents/lib/components/map";
-import "./locationButton";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
 import Feature from "ol/Feature";
@@ -9,7 +8,6 @@ import Point from "ol/geom/Point";
 import { Circle, Fill, Style, Text } from "ol/style";
 import Select from "ol/interaction/Select";
 import { pointerMove } from "ol/events/condition";
-import Control from "ol/control/Control";
 
 const HybridMap = () => {
   const mapRef = useRef();
@@ -52,8 +50,21 @@ const HybridMap = () => {
   });
 
   useEffect(() => {
+    if (features.length > 0 && map) {
+      featuresLayer.setSource(
+        new VectorSource({
+          features: features,
+        })
+      );
+
+      map.getView().fit(featuresLayer.getSource().getExtent(), {
+        padding: [100, 100, 100, 100],
+      });
+    }
+  }, [features, map]);
+
+  useEffect(() => {
     const map = mapRef.current.map;
-    const buttonEl = document.createElement("location-button");
     map.addInteraction(
       new Select({
         style: () => {
@@ -71,34 +82,12 @@ const HybridMap = () => {
         condition: pointerMove,
       })
     );
-    map.addLayer(
-      new VectorLayer({
-        source: new VectorSource(),
-        features: features,
-      })
-    );
-    map.addControl(new Control({ element: buttonEl }));
+    map.addLayer(featuresLayer);
     setMap(map);
   }, [mapRef]);
 
-  useEffect(() => {
-    if (features.length > 0 && map) {
-      featuresLayer.setSource(
-        new VectorSource({
-          features: features,
-        })
-      );
-
-      map.getView().fit(featuresLayer.getSource().getExtent(), {
-        maxZoom: 8,
-      });
-    }
-  }, [features, map]);
-
   return (
     <vl-map ref={mapRef}>
-      <vl-map-overview-map></vl-map-overview-map>
-      <vl-map-baselayer-grb-ortho></vl-map-baselayer-grb-ortho>
       <vl-map-baselayer-grb-gray></vl-map-baselayer-grb-gray>
     </vl-map>
   );
