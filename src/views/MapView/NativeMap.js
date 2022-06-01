@@ -1,17 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useRef, useEffect, useState } from "react";
 import "uig-webcomponents/lib/components/map";
-import "./locationButton";
+import Map from "ol/Map";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
+import View from "ol/View";
+import "ol/ol.css";
+import TileLayer from "ol/layer/Tile";
 import Feature from "ol/Feature";
 import Point from "ol/geom/Point";
+import WMTSSource from "ol/source/WMTS";
 import { Circle, Fill, Style, Text } from "ol/style";
 import Select from "ol/interaction/Select";
 import { pointerMove } from "ol/events/condition";
-import Control from "ol/control/Control";
+import WMTSTileGrid from "ol/tilegrid/WMTS";
+import * as olExtent from "ol/extent";
+import Projection from "ol/proj/Projection";
 
-const HybridMap = () => {
+const NativeMap = () => {
   const mapRef = useRef();
   const [map, setMap] = useState();
   const [features, setFeatures] = useState([
@@ -52,8 +58,47 @@ const HybridMap = () => {
   });
 
   useEffect(() => {
-    const map = mapRef.current.map;
-    const buttonEl = document.createElement("location-button");
+    const projection = new Projection({
+      code: "EPSG:31370",
+      extent: [9928, 66928, 272072, 329072],
+      getPointResolution: (r) => r,
+    });
+    const size = olExtent.getWidth(projection.getExtent()) / 256;
+    const resolutions = new Array(16);
+    const matrixIds = new Array(16);
+    for (let z = 0; z < 16; ++z) {
+      resolutions[z] = size / Math.pow(2, z);
+      matrixIds[z] = z;
+    }
+
+    const map = new Map({
+      layers: [
+        new TileLayer({
+          title: "Test title",
+          type: "base",
+          source: new WMTSSource({
+            url: "https://tile.informatievlaanderen.be/ws/raadpleegdiensten/wmts",
+            layer: "omwrgbmrvl",
+            matrixSet: "BPL72VL",
+            format: "image/png",
+            projection: "EPSG:31370",
+            tileGrid: new WMTSTileGrid({
+              extent: projection.getExtent(),
+              origin: olExtent.getTopLeft(projection.getExtent()),
+              resolutions: resolutions,
+              matrixIds: matrixIds,
+            }),
+          }),
+        }),
+        featuresLayer,
+      ],
+      target: mapRef.current,
+      view: new View({
+        center: [0, 0],
+        zoom: 2,
+      }),
+    });
+
     map.addInteraction(
       new Select({
         style: () => {
@@ -71,15 +116,9 @@ const HybridMap = () => {
         condition: pointerMove,
       })
     );
-    map.addLayer(
-      new VectorLayer({
-        source: new VectorSource(),
-        features: features,
-      })
-    );
-    map.addControl(new Control({ element: buttonEl }));
+
     setMap(map);
-  }, [mapRef]);
+  }, []);
 
   useEffect(() => {
     if (features.length > 0 && map) {
@@ -89,19 +128,13 @@ const HybridMap = () => {
         })
       );
 
-      map.getView().fit(featuresLayer.getSource().getExtent(), {
-        maxZoom: 8,
-      });
+      // map.getView().fit(featuresLayer.getSource().getExtent(), {
+      //   maxZoom: 14,
+      // });
     }
   }, [features, map]);
 
-  return (
-    <vl-map ref={mapRef}>
-      <vl-map-overview-map></vl-map-overview-map>
-      <vl-map-baselayer-grb-ortho></vl-map-baselayer-grb-ortho>
-      <vl-map-baselayer-grb-gray></vl-map-baselayer-grb-gray>
-    </vl-map>
-  );
+  return <div style={{ width: "100%", height: "500px" }} ref={mapRef}></div>;
 };
 
-export default HybridMap;
+export default NativeMap;
