@@ -25,6 +25,9 @@ function App() {
     <Suspense fallback={<></>}>
       <Router>
         <Switch>
+          <Route path="/map">
+            <MapView />
+          </Route>
           <Route path="/modal">
             <ModalView />
           </Route>
