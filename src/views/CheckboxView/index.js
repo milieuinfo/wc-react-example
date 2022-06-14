@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Page from "../../components/Page";
 import SectionWrap from "../../components/SectionWrap";
-import "uig-webcomponents/lib/components/checkbox";
+import "uig-webcomponents/lib/legacy/checkbox";
 
 const CheckboxView = () => {
   const [checked, setChecked] = useState(true);
