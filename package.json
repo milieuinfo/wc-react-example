@@ -11,7 +11,7 @@
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1",
-    "uig-webcomponents": "2.2.6-alpha-02",
+    "uig-webcomponents": "3.0.1",
     "webcomponenten-vl-ui-bom": "4.1.0"
   },
   "scripts": {

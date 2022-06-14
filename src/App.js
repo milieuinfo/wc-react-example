@@ -14,6 +14,8 @@ import ModalView from "./views/ModalView";
 import ButtonView from "./views/ButtonView";
 import AccordionView from "./views/AccordionView";
 import LinkView from "./views/LinkView";
+import ToasterView from "./views/ToasterView";
+import InfotextView from "./views/InfotextView";
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
 const SelectView = lazy(() => import("./views/SelectView"));
@@ -25,6 +27,15 @@ function App() {
     <Suspense fallback={<></>}>
       <Router>
         <Switch>
+          <Route path="/infotext">
+            <InfotextView />
+          </Route>
+          <Route path="/toaster">
+            <ToasterView />
+          </Route>
+          <Route path="/map">
+            <MapView />
+          </Route>
           <Route path="/modal">
             <ModalView />
           </Route>
