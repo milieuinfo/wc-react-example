@@ -16,6 +16,8 @@ import AccordionView from "./views/AccordionView";
 import LinkView from "./views/LinkView";
 import ToasterView from "./views/ToasterView";
 import InfotextView from "./views/InfotextView";
+import TextareaView from "./views/TextareaView";
+
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
 const SelectView = lazy(() => import("./views/SelectView"));
@@ -27,6 +29,9 @@ function App() {
     <Suspense fallback={<></>}>
       <Router>
         <Switch>
+          <Route path="/textarea">
+            <TextareaView />
+          </Route>
           <Route path="/infotext">
             <InfotextView />
           </Route>
