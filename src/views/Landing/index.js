@@ -22,6 +22,7 @@ const Landing = () => {
         <Doormat href="/radio" title="vl-radio" />
         <Doormat href="/select" title="vl-select" />
         <Doormat href="/tabs" title="vl-tabs" />
+        <Doormat href="/textarea" title="vl-textarea" />
         <Doormat href="/toaster" title="vl-toaster" />
         <Doormat href="/upload" title="vl-upload" />
         <Doormat href="/wizard" title="vl-wizard" />
