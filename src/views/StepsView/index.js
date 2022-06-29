@@ -7,15 +7,17 @@ const StepsView = () => {
   return (
     <Page title="Steps">
       <SectionWrap>
-        <h2 is="vl-h2">Example 1</h2>
         <div is="vl-column">
-          <vl-steps id="vl-steps-1">
+          <h2 is="vl-h2">Example 1</h2>
+        </div>
+        <div is="vl-column">
+          <vl-steps>
             <vl-step>
               <span slot="identifier">2</span>
               <span slot="title">Step 2: Second action</span>
               <span slot="sub-title">This is a subtitle.</span>
             </vl-step>
-            <vl-step disabled="">
+            <vl-step disabled>
               <span slot="identifier">3</span>
               <span slot="title">Step 3: Third action</span>
               <span slot="sub-title">This is a subtitle.</span>
@@ -39,56 +41,63 @@ const StepsView = () => {
         </div>
       </SectionWrap>
       <SectionWrap>
-        <h2 is="vl-h2">Example 2</h2>
-        <vl-steps id="vl-steps-2">
-          <vl-step data-vl-disabled="">
-            <span slot="identifier">0</span>
-            <span slot="title">Six centuries ago</span>
-            <span slot="sub-title">The last visitor from earth entered my world.</span>
-            <span slot="content">
-              Now, it's your turn to feel that pain. The gates are open.
-            </span>
-          </vl-step>
-          <vl-step data-vl-toggleable="">
-            <span slot="identifier">1</span>
-            <span slot="title">Gate 1</span>
-            <span slot="content">
-              Darkness, the world of demons. Look around you, they're everywhere.
-            </span>
-          </vl-step>
-          <vl-step data-vl-toggleable="">
-            <span slot="identifier">2</span>
-            <span slot="title">Gate 2</span>
-            <span slot="content">
-              My guards are watching you.
-            </span>
-          </vl-step>
-          <vl-step data-vl-toggleable="">
-            <span slot="identifier">3</span>
-            <span slot="title">Gate 3</span>
-            <span slot="content">
-              Only evil lives here.
-            </span>
-          </vl-step>
-          <vl-step data-vl-toggleable="">
-            <span slot="identifier">4</span>
-            <span slot="title">Gate 4</span>
-            <span slot="content">
-              There's no way out.
-            </span>
-          </vl-step>
-          <vl-step data-vl-toggleable="">
-            <span slot="identifier">5</span>
-            <span slot="title">Gate 5</span>
-            <span slot="content">
-              Feel the fire.
-            </span>
-          </vl-step>
-        </vl-steps>
+        <div is="vl-column">
+          <h2 is="vl-h2">Example 2</h2>
+        </div>
+        <div is="vl-column">
+          <vl-steps>
+            <vl-step data-vl-disabled>
+              <span slot="identifier">0</span>
+              <span slot="title">Six centuries ago</span>
+              <span slot="sub-title">The last visitor from earth entered my world.</span>
+              <span slot="content">
+                Now, it's your turn to feel that pain. The gates are open.
+              </span>
+            </vl-step>
+            <vl-step data-vl-toggleable>
+              <span slot="identifier">1</span>
+              <span slot="title">Gate 1</span>
+              <span slot="content">
+                Darkness, the world of demons. Look around you, they're everywhere.
+              </span>
+            </vl-step>
+            <vl-step data-vl-toggleable>
+              <span slot="identifier">2</span>
+              <span slot="title">Gate 2</span>
+              <span slot="content">
+                My guards are watching you.
+              </span>
+            </vl-step>
+            <vl-step data-vl-toggleable>
+              <span slot="identifier">3</span>
+              <span slot="title">Gate 3</span>
+              <span slot="content">
+                Only evil lives here.
+              </span>
+            </vl-step>
+            <vl-step data-vl-toggleable>
+              <span slot="identifier">4</span>
+              <span slot="title">Gate 4</span>
+              <span slot="content">
+                There's no way out.
+              </span>
+            </vl-step>
+            <vl-step data-vl-toggleable>
+              <span slot="identifier">5</span>
+              <span slot="title">Gate 5</span>
+              <span slot="content">
+                Feel the fire.
+              </span>
+            </vl-step>
+          </vl-steps>
+        </div>
       </SectionWrap>
       <SectionWrap>
-        <h2 is="vl-h2">Example 3</h2>
-          <vl-steps id="vl-steps-3" data-vl-timeline="">
+        <div is="vl-column">
+          <h2 is="vl-h2">Example 3</h2>
+        </div>
+        <div is="vl-column">
+          <vl-steps data-vl-timeline>
             <vl-step>
               <span slot="identifier">2</span>
               <span slot="identifier-annotation">maa</span>
@@ -121,7 +130,7 @@ const StepsView = () => {
             <vl-duration-step>
               Vrije tijd: 2 uur
             </vl-duration-step>
-            <vl-step data-vl-disabled="">
+            <vl-step data-vl-disabled>
               <span slot="identifier">3</span>
               <span slot="identifier-annotation">maa</span>
               <span slot="title">Bike ride</span>
@@ -162,6 +171,7 @@ const StepsView = () => {
               </span>
             </vl-step>
         </vl-steps>
+        </div>
       </SectionWrap>
     </Page>
   );
