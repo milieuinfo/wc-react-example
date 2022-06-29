@@ -17,6 +17,7 @@ import LinkView from "./views/LinkView";
 import ToasterView from "./views/ToasterView";
 import InfotextView from "./views/InfotextView";
 import TextareaView from "./views/TextareaView";
+import StepsView from "./views/StepsView";
 
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
@@ -29,6 +30,9 @@ function App() {
     <Suspense fallback={<></>}>
       <Router>
         <Switch>
+          <Route path="/steps">
+            <StepsView />
+          </Route>
           <Route path="/textarea">
             <TextareaView />
           </Route>
