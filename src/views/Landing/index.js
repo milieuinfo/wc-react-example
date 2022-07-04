@@ -21,6 +21,7 @@ const Landing = () => {
         <Doormat href="/progress-bar" title="vl-progress-bar" />
         <Doormat href="/radio" title="vl-radio" />
         <Doormat href="/select" title="vl-select" />
+        <Doormat href="/steps" title="vl-steps" />
         <Doormat href="/tabs" title="vl-tabs" />
         <Doormat href="/textarea" title="vl-textarea" />
         <Doormat href="/toaster" title="vl-toaster" />
