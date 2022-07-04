@@ -18,6 +18,7 @@ import ToasterView from "./views/ToasterView";
 import InfotextView from "./views/InfotextView";
 import TextareaView from "./views/TextareaView";
 import StepsView from "./views/StepsView";
+import DatepickerView from "./views/DatepickerView";
 
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
@@ -30,6 +31,9 @@ function App() {
     <Suspense fallback={<></>}>
       <Router>
         <Switch>
+          <Route path="/datepicker">
+            <DatepickerView />
+          </Route>
           <Route path="/steps">
             <StepsView />
           </Route>
