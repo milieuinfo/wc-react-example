@@ -21,6 +21,7 @@ import StepsView from "./views/StepsView";
 import MultiSelectView from "./views/MultiSelectView";
 import RichDataView from "./views/RichDataView";
 import RichDataTableView from "./views/RichDataTableView";
+import DatepickerView from "./views/DatepickerView";
 
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
@@ -41,6 +42,8 @@ function App() {
           </Route>
           <Route path="/multiselect">
             <MultiSelectView />
+          <Route path="/datepicker">
+            <DatepickerView />
           </Route>
           <Route path="/steps">
             <StepsView />

@@ -12,6 +12,7 @@ const Landing = () => {
         <Doormat href="/button" title="vl-button" />
         <Doormat href="/checkbox" title="vl-checkbox" />
         <Doormat href="/cookie-consent" title="vl-cookie-consent" />
+        <Doormat href="/datepicker" title="vl-datepicker" />
         <Doormat href="/http-error-message" title="vl-http-error-message" />
         <Doormat href="/infotext" title="vl-infotext" />
         <Doormat href="/info-tile" title="vl-info-tile" />
@@ -21,6 +22,7 @@ const Landing = () => {
         <Doormat href="/progress-bar" title="vl-progress-bar" />
         <Doormat href="/radio" title="vl-radio" />
         <Doormat href="/select" title="vl-select" />
+        <Doormat href="/steps" title="vl-steps" />
         <Doormat href="/tabs" title="vl-tabs" />
         <Doormat href="/textarea" title="vl-textarea" />
         <Doormat href="/toaster" title="vl-toaster" />
