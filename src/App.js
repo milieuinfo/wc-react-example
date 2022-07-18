@@ -17,6 +17,10 @@ import LinkView from "./views/LinkView";
 import ToasterView from "./views/ToasterView";
 import InfotextView from "./views/InfotextView";
 import TextareaView from "./views/TextareaView";
+import StepsView from "./views/StepsView";
+import MultiSelectView from "./views/MultiSelectView";
+import RichDataView from "./views/RichDataView";
+import RichDataTableView from "./views/RichDataTableView";
 
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
@@ -29,6 +33,18 @@ function App() {
     <Suspense fallback={<></>}>
       <Router>
         <Switch>
+          <Route path="/richdatatable">
+            <RichDataTableView />
+          </Route>
+          <Route path="/richdata">
+            <RichDataView />
+          </Route>
+          <Route path="/multiselect">
+            <MultiSelectView />
+          </Route>
+          <Route path="/steps">
+            <StepsView />
+          </Route>
           <Route path="/textarea">
             <TextareaView />
           </Route>

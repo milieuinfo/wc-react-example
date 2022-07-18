@@ -27,6 +27,9 @@ const Landing = () => {
         <Doormat href="/upload" title="vl-upload" />
         <Doormat href="/wizard" title="vl-wizard" />
         <Doormat href="/form" title="vl-form" />
+        <Doormat href="/multiselect" title="vl-multiselect" />
+        <Doormat href="/richdata" title="vl-rich-data" />
+        <Doormat href="/richdatatable" title="vl-rich-data-table" />
       </SectionWrap>
     </Page>
   );
