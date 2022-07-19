@@ -1,45 +1,45 @@
-// import { Switch, Route, useRouteMatch } from "react-router-dom";
-// import "uig-webcomponents/lib/components/cookie-consent";
-// import Page from "../../components/Page";
-// import SectionWrap from "../../components/SectionWrap";
-// import Doormat from "../../components/Doormat";
-// import Default from "./Default";
-// import WithAnalytics from "./WithAnalytics";
-// import WithExtraOptIns from "./WithExtraOptIns";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
+import Page from "../../components/Page";
+import SectionWrap from "../../components/SectionWrap";
+import "uig-webcomponents/lib/legacy/cookie-consent";
 
-// const CookieConsentView = () => {
-//   const { path } = useRouteMatch();
+const CookieConsentView = () => {
+  return (
+    <Page title="Cookie consent">
+      <SectionWrap>
+        <div is="vl-column">
+          <h2 is="vl-h2">Example 1</h2>
+        </div>
+        <div is="vl-column">
+          <vl-cookie-consent
+            id="cookie-consent"
+            data-vl-auto-open-disabled=""
+          ></vl-cookie-consent>
+          <button
+            id="button-open-cookie-consent"
+            is="vl-button"
+            onclick="document.querySelector('#cookie-consent').open();"
+          >
+            Open cookie-consent
+          </button>
+        </div>
+      </SectionWrap>
+      <SectionWrap>
+        <div is="vl-column">
+          <h2 is="vl-h2">Example 2</h2>
+        </div>
+        <div is="vl-column">
+        <vl-cookie-consent id="cookie-consent-with-extra-opt-in" data-vl-auto-open-disabled="">
+          <vl-cookie-consent-opt-in id="socialmedia" data-vl-label="Sociale media" data-vl-description="Beschrijving van de sociale media cookies."></vl-cookie-consent-opt-in>
+        </vl-cookie-consent>
+        <button id="button-open-cookie-consent-with-extra-opt-in" is="vl-button" onclick="document.querySelector('#cookie-consent-with-extra-opt-in').open();">
+          Open cookie-consent
+        </button>
+        </div>
+      </SectionWrap>
+    </Page>
+  );
+};
 
-//   return (
-//     <>
-//       <Switch>
-//         <Route exact path={path}>
-//           <Page title="Cookie consent">
-//             <SectionWrap>
-//               <Doormat href="/cookie-consent/default" title="Default example" />
-//               <Doormat
-//                 href="/cookie-consent/with-analytics"
-//                 title="Example with analytics"
-//               />
-//               <Doormat
-//                 href="/cookie-consent/with-extra-opt-ins"
-//                 title="Example with extra opt ins"
-//               />
-//             </SectionWrap>
-//           </Page>
-//         </Route>
-//         <Route path={`${path}/default`}>
-//           <Default />
-//         </Route>
-//         <Route path={`${path}/with-analytics`}>
-//           <WithAnalytics />
-//         </Route>
-//         <Route path={`${path}/with-extra-opt-ins`}>
-//           <WithExtraOptIns />
-//         </Route>
-//       </Switch>
-//     </>
-//   );
-// };
-
-// export default CookieConsentView;
+export default CookieConsentView;
