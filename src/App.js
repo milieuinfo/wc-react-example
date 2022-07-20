@@ -23,6 +23,7 @@ import RichDataView from "./views/RichDataView";
 import RichDataTableView from "./views/RichDataTableView";
 import DatepickerView from "./views/DatepickerView";
 import CookieConsentView from "./views/CookieConsentView";
+import CookieStatementView from "./views/CookieStatementView";
 
 // lazy load some views as a test
 const Landing = lazy(() => import("./views/Landing"));
@@ -115,6 +116,9 @@ function App() {
           </Route>
           <Route path="/cookie-consent">
             <CookieConsentView />
+          </Route>
+          <Route path="/cookie-statement">
+            <CookieStatementView />
           </Route>
           <Route path="/">
             <Landing />
